@@ -1033,7 +1033,6 @@ def load_config(path):
 	config = {}
 	fn = open(path, 'r')
 	for line in fn.readlines():
-		print(line)
 		key, value = line.split('=') 
 		if is_int(value):
 			true_type_value = int(value)
@@ -1045,7 +1044,6 @@ def load_config(path):
 			else:	
 				true_type_value = value
 		config[key] = true_type_value
-	print(config)
 	return config
 
 
