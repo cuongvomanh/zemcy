@@ -1,9 +1,5 @@
 README.md
 setup.py
-zemcy/__init__.py
-zemcy/recognition.py
-zemcy/support_lib.py
-zemcy/video.py
 zemcy.egg-info/PKG-INFO
 zemcy.egg-info/SOURCES.txt
 zemcy.egg-info/dependency_links.txt
