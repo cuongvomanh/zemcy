@@ -328,7 +328,7 @@ def draw_text(img, text, window, fontpath="vni-full-standard/font-times-new-roma
 
 # video
 video_extentions = ['mp4', 'avi']
-img_extentions = ['jpeg', 'jpg', 'png']
+img_extentions = ['jpeg', 'jpg', 'png', 'JPG', 'PNG', 'JPEG']
 def is_video_type(video_uri):
 	for video_extention in video_extentions:
 		if video_uri.endswith(video_extention):
