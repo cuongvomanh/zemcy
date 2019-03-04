@@ -705,7 +705,7 @@ def cal_box_overlaping_area_ratio(box1, box2):
 		print('img_resolution = ', img_resolution)
 	if False:
 		print('box1, box2 = ', box1, box2)
-	img = create_img(img_resolution, is_value_is_zero= False)
+	img = create_img(img_resolution, color= (155, 255, 255))
 	(center_x1, center_y1), (a1, b1), angle1 = box1
 	(center_x2, center_y2), (a2, b2), angle2 = box2
 

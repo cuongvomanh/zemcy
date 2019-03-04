@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="zemcy",
-    version="0.0.9.3_local",
+    version="0.0.9.5_local",
     author="Cuong Vo Manh",
     author_email="cuong.vomanh195@gmail.com",
     description="zemcy library for computer vision",
