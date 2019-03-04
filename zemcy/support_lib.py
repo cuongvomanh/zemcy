@@ -320,7 +320,7 @@ def draw_text(img, text, window, fontpath="vni-full-standard/font-times-new-roma
 	font = ImageFont.truetype(fontpath, font_size)
 	pil_img = Image.fromarray(img)
 	draw = ImageDraw.Draw(pil_img)
-	b,g,r,a = *color, 0
+        b,g,r,a = color[0], color[1], color[2], 0
 	draw.text((l, t),  text, font = font, fill = (b, g, r, a))
 	img[...] = np.array(pil_img)
 
