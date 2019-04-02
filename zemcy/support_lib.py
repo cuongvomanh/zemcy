@@ -324,7 +324,7 @@ def draw_text(img, text, window, fontpath="vni-full-standard/font-times-new-roma
 	font = ImageFont.truetype(fontpath, font_size)
 	pil_img = Image.fromarray(img)
 	draw = ImageDraw.Draw(pil_img)
-	b,g,r,a = *color, 0
+        b,g,r,a = color[0], color[1], color[2], 0
 	draw.text((l, t),  text, font = font, fill = (b, g, r, a))
 	img[...] = np.array(pil_img)
 
@@ -332,7 +332,7 @@ def draw_text(img, text, window, fontpath="vni-full-standard/font-times-new-roma
 
 # video
 video_extentions = ['mp4', 'avi']
-img_extentions = ['jpeg', 'jpg', 'png']
+img_extentions = ['jpeg', 'jpg', 'png', 'JPG', 'PNG', 'JPEG']
 def is_video_type(video_uri):
 	for video_extention in video_extentions:
 		if video_uri.endswith(video_extention):
@@ -709,7 +709,7 @@ def cal_box_overlaping_area_ratio(box1, box2):
 		print('img_resolution = ', img_resolution)
 	if False:
 		print('box1, box2 = ', box1, box2)
-	img = create_img(img_resolution, is_value_is_zero= False)
+	img = create_img(img_resolution, color= (155, 255, 255))
 	(center_x1, center_y1), (a1, b1), angle1 = box1
 	(center_x2, center_y2), (a2, b2), angle2 = box2
 
