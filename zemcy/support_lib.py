@@ -39,10 +39,14 @@ from glob import glob
 import math
 import numpy as np
 import cv2 as cv
-import statistics
-import imutils
+try:
+	import statistics
+	import imutils
+	from matplotlib import pyplot as plt
+	from PIL import Image,ImageFont, ImageDraw
+except:
+	pass
 import random
-from matplotlib import pyplot as plt
 from numpy import (array, dot, arccos, clip)
 from numpy.linalg import norm
 
@@ -312,7 +316,7 @@ def draw_information(frame, showing_window_name=None, recognitions = None, infor
 	cv.imshow(showing_window_name, frame)
 
 
-from PIL import Image,ImageFont, ImageDraw
+
 def draw_text(img, text, window, fontpath="vni-full-standard/font-times-new-roman.ttf", color=(0, 255, 0)):
 	n_line = len(text.split('\n'))
 	l, t, w, h = window
@@ -955,7 +959,10 @@ def floodFill_return_window(img, floodFill_mask, seed_pt, low, high, color = (25
 
 
 # ocr
-import pytesseract
+try:
+	import pytesseract
+except:
+	pass
 def image_to_string(img, lang='vie'):
 	img = Image.fromarray(cv.cvtColor(img, cv.COLOR_BGR2RGB))
 	if lang == 'eng':
