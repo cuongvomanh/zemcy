@@ -3,7 +3,7 @@ from threading import Thread
 import sys
 is_py2 = sys.version[0] == '2'
 if is_py2:
-    import Queue
+    from Queue import Queue
 else:
     from queue import Queue
 import time
@@ -32,7 +32,7 @@ class QueuedStream:
             self.fps = 0
         else:
             self.stream = cv2.VideoCapture(uri)
-            if uri.startswith('rtsp://'):
+            if uri.startswith('rtsp://') or uri.startswith('rtmp://'):
                 self.fps = 0
         self.stopped = False
         self.queue = Queue(maxsize=queueSize)
